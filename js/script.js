@@ -10,11 +10,13 @@ let languagesFilter = '';
 let mimeTypeFilter = '';
 let sortFilter = '';
 let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+let genreHistory = JSON.parse(localStorage.getItem('genreHistory')) || [];
 
 // Fetch books from API
 async function fetchBooks(page = 1, search = '', genre = '', yearStart = '', yearEnd = '', copyright = '', ids = '', languages = '', mimeType = '', sort = '') {
     document.getElementById('loading').style.display = 'block'; // Show loading spinner
-    
+
     let url = `${API_URL}/?page=${page}`;
     if (search) url += `&search=${search}`;
     if (genre) url += `&topic=${genre}`;
@@ -25,7 +27,7 @@ async function fetchBooks(page = 1, search = '', genre = '', yearStart = '', yea
     if (languages) url += `&languages=${languages}`;
     if (mimeType) url += `&mime_type=${mimeType}`;
     if (sort) url += `&sort=${sort}`;
-    
+
     const response = await fetch(url);
     const data = await response.json();
 
@@ -34,11 +36,10 @@ async function fetchBooks(page = 1, search = '', genre = '', yearStart = '', yea
     displayBooks(data.results);
     populateGenreDropdown(data.results);
     handlePagination(data.next, data.previous);
-    
+
     // Show pagination after loading
     document.getElementById('pagination').classList.remove('hidden'); 
 }
-
 
 // Display books
 function displayBooks(books) {
@@ -90,6 +91,7 @@ function populateGenreDropdown(books) {
 function filterByGenre(genre) {
     genreFilter = genre;
     fetchBooks(1, searchQuery, genreFilter, authorYearStart, authorYearEnd, copyrightFilter, idsFilter, languagesFilter, mimeTypeFilter, sortFilter);
+    saveGenreHistory(genre); // Save genre history
 }
 
 // Handle pagination
@@ -105,10 +107,12 @@ function handlePagination(next, previous) {
         document.getElementById('pagination').style.display = 'none'; 
     }
 }
+
 // Search functionality
 document.getElementById('searchBar').addEventListener('input', (e) => {
     searchQuery = e.target.value;
     fetchBooks(1, searchQuery, genreFilter, authorYearStart, authorYearEnd, copyrightFilter, idsFilter, languagesFilter, mimeTypeFilter, sortFilter);
+    saveSearchHistory(searchQuery); // Save search history
 });
 
 // Wishlist functionality
@@ -171,6 +175,28 @@ document.getElementById('sortFilter').addEventListener('change', (e) => {
     sortFilter = e.target.value;
     fetchBooks(1, searchQuery, genreFilter, authorYearStart, authorYearEnd, copyrightFilter, idsFilter, languagesFilter, mimeTypeFilter, sortFilter);
 });
+
+// Save search history
+function saveSearchHistory(query) {
+    if (query && !searchHistory.includes(query)) {
+        searchHistory.push(query);
+        if (searchHistory.length > 10) {
+            searchHistory.shift(); // Remove the oldest search if we exceed 10
+        }
+        localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+    }
+}
+
+// Save genre history
+function saveGenreHistory(genre) {
+    if (genre && !genreHistory.includes(genre)) {
+        genreHistory.push(genre);
+        if (genreHistory.length > 5) {
+            genreHistory.shift(); // Remove the oldest genre if we exceed 5
+        }
+        localStorage.setItem('genreHistory', JSON.stringify(genreHistory));
+    }
+}
 
 // Initial fetch
 fetchBooks();
