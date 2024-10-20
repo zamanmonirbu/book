@@ -47,7 +47,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  width: 30%; /* Set the width of each card to 30% */
+  width: 20%; /* Set the width of each card to 30% */
   box-sizing: border-box; /* Include padding and border in width */
 }
 

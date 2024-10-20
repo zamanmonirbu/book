@@ -32,17 +32,18 @@ async function fetchBookDetails(id) {
     document.getElementById('bookLanguages').textContent = `Languages: ${data.languages.join(', ')}`;
     document.getElementById('bookDownloadCount').textContent = `Download Count: ${data.download_count}`;
 
-    // Show 'text/html' format as a button
-    const formatsList = document.getElementById('bookFormats');
-    formatsList.innerHTML = ''; // Clear existing formats
-    const htmlFormat = data.formats['text/html'];
+   // Show 'text/html' format as a button
+const formatsList = document.getElementById('bookFormats');
+formatsList.innerHTML = ''; // Clear existing formats
+const htmlFormat = data.formats['text/html'];
 
-    if (htmlFormat) {
-      const button = document.createElement('button');
-      button.classList.add('read-now-btn');
-      button.innerHTML = `<a href="${htmlFormat}" target="_blank">Read Now</a>`;
-      formatsList.appendChild(button);
-    }
+if (htmlFormat) {
+  const button = document.createElement('button');
+  button.classList.add('read-now-btn'); // Set the class for the button
+  button.innerHTML = `<a href="${htmlFormat}" target="_blank">Read Now</a>`;
+  formatsList.appendChild(button);
+}
+
   } catch (error) {
     console.error('Error fetching book details:', error);
     document.getElementById('loading').textContent = 'Error loading book details.';

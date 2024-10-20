@@ -1,18 +1,12 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
-}
-
-/* Books Container */
-.books-container {
-  display: grid;
-  grid-template-columns: 1fr; /* Default 1 column for mobile */
-  gap: 20px;
-  margin: 50px auto;
-  padding: 20px;
-  max-width: 1200px;
+/* Centering the Book Details Section */
+.details-container {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 50vh;
+  margin-top: 50px; /* Add margin top */
+  margin-bottom: 50px; /* Add margin bottom */
+  
 }
 
 /* Book Details Styles */
@@ -22,23 +16,33 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: center; /* Align items vertically centered */
+  width: 30%; /* Set width to 30% */
+  min-height: 50vh; /* Set height to 100vh */
+  margin: 0; /* Remove margin for centering */
+  text-align: left;
+}
+
+
+/* Cover Image Styles */
+.book-cover {
+  flex: 0 0 auto; /* Prevent the cover from stretching */
+  margin-right: 20px; /* Space between image and text */
 }
 
 .book-cover img {
   width: 100%;
   max-width: 200px; /* Limit the image size */
   border-radius: 10px;
-  margin-bottom: 20px;
 }
 
 .book-info {
-  text-align: center;
+  text-align: left; /* Align text to the left */
 }
 
 .book-info h1 {
   font-size: 20px;
+  font-weight: bold; /* Make the header bold */
 }
 
 .pricing .original-price {
@@ -66,16 +70,8 @@ body {
   width: 100%; /* Full width buttons */
 }
 
-.want-to-read-btn {
-  background-color: #f0ad4e;
-}
-
-.add-to-cart-btn {
-  background-color: #5bc0de;
-}
-
 .read-now-btn {
-  background-color: #071952;
+  background-color: #5bc0de;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -99,6 +95,7 @@ body {
 @media (min-width: 601px) {
   .books-container {
     grid-template-columns: repeat(2, 1fr); /* 2 columns for mid-sized devices */
+    height: 100vh;
   }
 }
 
@@ -145,19 +142,25 @@ body {
 /* Mobile Styles */
 @media (max-width: 600px) {
   .book-details {
-    flex-direction: column;
+    flex-direction: column; /* Stack items vertically on mobile */
     padding: 10px;
     margin: 0 auto;
+    width: 100%; /* Use full width on mobile */
+    height: auto; /* Adjust height for mobile */
+  }
+
+  .book-cover {
+    margin-right: 0; /* Remove right margin on mobile */
   }
 
   .book-cover img {
     width: 100%;
-    max-width: 300px;
+    max-width: 300px; /* Adjust max width for mobile */
     margin-bottom: 20px;
   }
 
   .book-info {
-    text-align: center;
+    text-align: left; /* Center align on mobile */
   }
 
   .action-buttons button {

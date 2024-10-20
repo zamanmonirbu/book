@@ -83,6 +83,27 @@ nav {
   }
 }
 
+.pagination {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center; /* Center the buttons vertically */
+  margin: 20px 0; /* Optional: add margin for spacing */
+}
+
+.pagination button {
+  padding: 10px 15px; /* Add padding to the buttons */
+  margin: 0 10px; /* Add margin between buttons */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #5bc0de; /* Button background color */
+  color: white; /* Button text color */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.pagination button:hover {
+  background-color: #3a9aab; /* Darker shade on hover */
+}
 
 .book {
   display: flex;
