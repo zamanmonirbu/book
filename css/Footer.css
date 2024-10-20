@@ -1,35 +1,34 @@
 .footer {
     background-color: #f8f8f8;
     padding: 20px;
-    text-align: left; /* Align text to the left */
+    text-align: left;
     border-top: 1px solid #eaeaea;
 }
 
 .footer-content {
     display: flex;
-    flex-direction: column; /* Stack elements vertically by default */
+    flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px 20px;
 }
 
-/* Adjust the layout for larger screens */
 @media (min-width: 768px) {
     .footer-content {
-        flex-direction: row; /* Use row layout on larger screens */
-        justify-content: space-between; /* Space items evenly */
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .footer-links,
     .footer-social {
-        flex: 1; /* Allow these to take equal space */
-        margin-bottom: 0; /* Remove margin for spacing in row layout */
+        flex: 1;
+        margin-bottom: 0;
     }
 }
 
 .footer-links,
 .footer-social {
-    margin-bottom: 20px; /* Add margin for spacing between items */
+    margin-bottom: 20px;
 }
 
 .footer-links h4,
@@ -54,13 +53,13 @@
 }
 
 .footer-links a:hover {
-    color: #58A557; /* Change to your hover color */
+    color: #58A557;
 }
 
 .social-icons {
     display: flex;
-    flex-wrap: wrap; /* Allow icons to wrap to the next line */
-    justify-content: flex-start; /* Align social icons to the left */
+    flex-wrap: wrap;
+    justify-content: flex-start;
     margin-top: 10px;
 }
 
@@ -68,21 +67,20 @@
     color: #333;
     font-size: 24px;
     transition: color 0.3s ease;
-    margin: 0 10px; /* Reduce the margin between icons */
+    margin: 0 10px;
 }
 
 .social-icons a:hover {
-    color: #58A557; /* Change to your hover color */
+    color: #58A557;
 }
 
-/* Adjust social icons for smaller screens */
 @media (max-width: 600px) {
     .social-icons {
-        justify-content: center; /* Center align icons on small screens */
+        justify-content: center;
     }
 
     .social-icons a {
-        margin: 0 5px; /* Reduce the margin for better spacing */
+        margin: 0 5px;
     }
 }
 
@@ -90,5 +88,5 @@
     margin-top: 20px;
     font-size: 14px;
     color: #666;
-    text-align: center; /* Align footer text to the left */
+    text-align: center;
 }

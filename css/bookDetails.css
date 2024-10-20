@@ -1,48 +1,43 @@
-/* Centering the Book Details Section */
 .details-container {
-  display: flex; /* Use flexbox */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 50vh;
-  margin-top: 50px; /* Add margin top */
-  margin-bottom: 50px; /* Add margin bottom */
-  
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-/* Book Details Styles */
 .book-details {
   background-color: white;
   padding: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   display: flex;
-  align-items: center; /* Align items vertically centered */
-  width: 30%; /* Set width to 30% */
-  min-height: 50vh; /* Set height to 100vh */
-  margin: 0; /* Remove margin for centering */
+  align-items: center;
+  width: 30%;
+  min-height: 50vh;
+  margin: 0;
   text-align: left;
 }
 
-
-/* Cover Image Styles */
 .book-cover {
-  flex: 0 0 auto; /* Prevent the cover from stretching */
-  margin-right: 20px; /* Space between image and text */
+  flex: 0 0 auto;
+  margin-right: 20px;
 }
 
 .book-cover img {
   width: 100%;
-  max-width: 200px; /* Limit the image size */
+  max-width: 200px;
   border-radius: 10px;
 }
 
 .book-info {
-  text-align: left; /* Align text to the left */
+  text-align: left;
 }
 
 .book-info h1 {
   font-size: 20px;
-  font-weight: bold; /* Make the header bold */
+  font-weight: bold;
 }
 
 .pricing .original-price {
@@ -67,7 +62,7 @@
   border: none;
   border-radius: 5px;
   color: white;
-  width: 100%; /* Full width buttons */
+  width: 100%;
 }
 
 .read-now-btn {
@@ -91,21 +86,19 @@
   background-color: #2980b9;
 }
 
-/* Responsive Grid Layout */
 @media (min-width: 601px) {
   .books-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for mid-sized devices */
+    grid-template-columns: repeat(2, 1fr);
     height: 100vh;
   }
 }
 
 @media (min-width: 901px) {
   .books-container {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns for larger devices */
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
-/* Loader */
 .loader {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
@@ -139,28 +132,27 @@
   margin-left: 10px;
 }
 
-/* Mobile Styles */
 @media (max-width: 600px) {
   .book-details {
-    flex-direction: column; /* Stack items vertically on mobile */
+    flex-direction: column;
     padding: 10px;
     margin: 0 auto;
-    width: 100%; /* Use full width on mobile */
-    height: auto; /* Adjust height for mobile */
+    width: 100%;
+    height: auto;
   }
 
   .book-cover {
-    margin-right: 0; /* Remove right margin on mobile */
+    margin-right: 0;
   }
 
   .book-cover img {
     width: 100%;
-    max-width: 300px; /* Adjust max width for mobile */
+    max-width: 300px;
     margin-bottom: 20px;
   }
 
   .book-info {
-    text-align: left; /* Center align on mobile */
+    text-align: left;
   }
 
   .action-buttons button {

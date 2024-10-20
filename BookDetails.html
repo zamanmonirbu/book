@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Details</title>
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    
+    <!-- Material Icons and Font Awesome -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="./css/Navbar.css" />
     <link rel="stylesheet" href="./css/bookDetails.css" />
     <link rel="stylesheet" href="./css/Footer.css" />
@@ -24,6 +24,8 @@
             <span class="material-icons large-icon">menu_book</span>
           </a>
         </div>
+        
+        <!-- Search Bar -->
         <div class="search-container">
           <p class="search-category">Book Title</p>
           <input
@@ -56,32 +58,34 @@
 
     <hr class="navbar-strike" />
 
- 
-   <!-- Book Details Section -->
-<div class="details-container">
-  <div class="book-details">
-    <div class="loading" id="loading">
-      <div class="loader"></div>
-      <span>Loading...</span>
+    <!-- Book Details Section -->
+    <div class="details-container">
+      <div class="book-details">
+        <!-- Loader for Book Details -->
+        <div class="loading" id="loading">
+          <div class="loader"></div>
+          <span>Loading...</span>
+        </div>
+        
+        <!-- Book Cover Container -->
+        <div class="book-cover" id="bookCoverContainer" style="display: none;">
+          <img src="" alt="Book Cover" id="bookCover" />
+        </div>
+       
+        <!-- Book Info Section -->
+        <div class="book-info" id="bookInfo" style="display: none;">
+          <h1 id="bookTitle">Book Title</h1>
+          <p class="author" id="bookAuthor">by Author Name</p>
+          <p class="category">Genre:</p>
+          <ul id="bookSubjects"></ul>
+          <p id="bookLanguages">Languages:</p>
+          <p id="bookDownloadCount"></p>
+          <div id="bookFormats"></div>
+        </div>
+      </div>
     </div>
-    <div class="book-cover" id="bookCoverContainer" style="display: none;">
-      <img src="" alt="Book Cover" id="bookCover" />
-    </div>
-   
-    <!-- Book Info Section -->
-    <div class="book-info" id="bookInfo" style="display: none;">
-      <h1 id="bookTitle">Book Title</h1>
-      <p class="author" id="bookAuthor">by Author Name</p>
-      <p class="category">Genre:</p>
-      <ul id="bookSubjects"></ul>
-      <p id="bookLanguages">Languages:</p>
-      <p id="bookDownloadCount"></p>
-      <div id="bookFormats"></div>
-    </div>
-  </div>
-</div>
 
-
+    <!-- Footer Section -->
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-links">
@@ -107,7 +111,6 @@
               <i class="fab fa-instagram"></i>
             </a>
           </div>
-          
         </div>
       </div>
       <div class="footer-bottom">
@@ -115,6 +118,7 @@
       </div>
     </footer>
 
+    <!-- JavaScript for Book Details Functionality -->
     <script src="./js/bookDetails.js"></script>
   </body>
 </html>

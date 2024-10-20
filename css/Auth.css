@@ -12,8 +12,8 @@ body {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 90%; /* Use a percentage for responsiveness */
-    box-sizing: border-box; /* Include padding and border in width */
+    width: 90%;
+    box-sizing: border-box;
 }
 
 h2 {
@@ -35,8 +35,8 @@ input {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    font-size: 16px; /* Ensure font size is consistent */
-    box-sizing: border-box; /* Include padding and border in width */
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
 button {
@@ -47,7 +47,7 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px; /* Ensure font size is consistent */
+    font-size: 16px;
 }
 
 button:hover {
@@ -68,33 +68,32 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .container {
-        margin: 50px auto; /* Reduce margin on smaller screens */
-        padding: 15px; /* Slightly reduce padding */
+        margin: 50px auto;
+        padding: 15px;
     }
 
     h2 {
-        font-size: 1.5em; /* Adjust heading size */
+        font-size: 1.5em;
     }
 
     button {
-        font-size: 14px; /* Smaller button font size */
+        font-size: 14px;
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        margin: 30px auto; /* Further reduce margin */
-        padding: 10px; /* Further reduce padding */
+        margin: 30px auto;
+        padding: 10px;
     }
 
     h2 {
-        font-size: 1.2em; /* Further adjust heading size */
+        font-size: 1.2em;
     }
 
     button {
-        font-size: 12px; /* Even smaller button font size */
+        font-size: 12px;
     }
 }

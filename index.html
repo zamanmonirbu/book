@@ -4,18 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book List</title>
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    
+    <!-- Material Icons and Font Awesome -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="./css/Navbar.css" />
     <link rel="stylesheet" href="./css/NavCategory.css" />
     <link rel="stylesheet" href="./css/BookList.css" />
     <link rel="stylesheet" href="./css/Footer.css" />
   </head>
   <body>
+    <!-- Navbar Section -->
     <nav class="navbar">
       <div class="navbar-content">
         <!-- Logo -->
@@ -24,14 +25,11 @@
             <span class="material-icons large-icon">menu_book</span>
           </a>
         </div>
+        
+        <!-- Search Bar -->
         <div class="search-container">
           <p class="search-category">Book Title</p>
-          <input
-            type="text"
-            placeholder="Search by title"
-            class="search-input"
-            id="searchBar"
-          />
+          <input type="text" placeholder="Search by title" class="search-input" id="searchBar" />
           <span class="material-icons search-icon">search</span>
         </div>
 
@@ -42,8 +40,6 @@
             <a href="login.html">Sign in</a>
           </div>
           <div class="icon-wrapper">
-            <!-- <span class="material-icons">handshake</span> -->
-
             <span class="material-icons">add_circle</span>
             <a href="#">Become A Contributor</a>
           </div>
@@ -58,19 +54,19 @@
 
     <hr class="navbar-strike" />
 
+    <!-- Dropdown Navigation for Filters -->
     <nav class="dropdown-nav">
       <div class="dropdown-container">
         <ul class="dropdown-menu">
           <!-- Genre Dropdown -->
           <li class="dropdown-item">
             <span class="material-icons">category</span>
-            <!-- Icon before the item -->
             <a href="#" class="dropdown-link" id="genreFilter">
               <b>Genre</b>
               <span class="material-icons dropdown-icon">arrow_drop_down</span>
             </a>
             <ul class="dropdown" id="genreDropdown">
-              <!-- Genres will be dynamically added here in 5 columns -->
+              <!-- Genres will be dynamically added here -->
             </ul>
           </li>
 
@@ -83,19 +79,9 @@
             </a>
             <div class="dropdown">
               <label for="authorYearStart" class="level">Start Year:</label>
-              <input
-                type="number"
-                id="authorYearStart"
-                class="dropdown-input"
-                placeholder="e.g., 1800"
-              />
+              <input type="number" id="authorYearStart" class="dropdown-input" placeholder="e.g., 1800" />
               <label for="authorYearEnd" class="level">End Year:</label>
-              <input
-                type="number"
-                id="authorYearEnd"
-                class="dropdown-input"
-                placeholder="e.g., 1900"
-              />
+              <input type="number" id="authorYearEnd" class="dropdown-input" placeholder="e.g., 1900" />
             </div>
           </li>
 
@@ -123,12 +109,7 @@
               <span class="material-icons dropdown-icon">arrow_drop_down</span>
             </a>
             <div class="dropdown">
-              <input
-                type="text"
-                id="idsFilter"
-                class="dropdown-input"
-                placeholder="Enter IDs (comma-separated)"
-              />
+              <input type="text" id="idsFilter" class="dropdown-input" placeholder="Enter IDs (comma-separated)" />
             </div>
           </li>
 
@@ -140,12 +121,7 @@
               <span class="material-icons dropdown-icon">arrow_drop_down</span>
             </a>
             <div class="dropdown">
-              <input
-                type="text"
-                id="languagesFilter"
-                class="dropdown-input"
-                placeholder="Enter languages (comma-separated)"
-              />
+              <input type="text" id="languagesFilter" class="dropdown-input" placeholder="Enter languages (comma-separated)" />
             </div>
           </li>
 
@@ -157,12 +133,7 @@
               <span class="material-icons dropdown-icon">arrow_drop_down</span>
             </a>
             <div class="dropdown">
-              <input
-                type="text"
-                id="mimeTypeFilter"
-                class="dropdown-input"
-                placeholder="e.g., text/plain"
-              />
+              <input type="text" id="mimeTypeFilter" class="dropdown-input" placeholder="e.g., text/plain" />
             </div>
           </li>
 
@@ -186,6 +157,7 @@
       </div>
     </nav>
 
+    <!-- Book Container for Book Listings -->
     <div class="book-container">
       <div id="bookList" class="book-list"></div>
       <div class="loading" id="loading">
@@ -193,6 +165,7 @@
         <span>Loading...</span>
       </div>
 
+      <!-- Pagination Controls -->
       <div class="pagination hidden" id="pagination">
         <button id="prevBtn">Previous</button>
         <span id="currentPage">1</span>
@@ -200,6 +173,7 @@
       </div>
     </div>
 
+    <!-- Footer Section -->
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-links">
@@ -225,7 +199,6 @@
               <i class="fab fa-instagram"></i>
             </a>
           </div>
-          
         </div>
       </div>
       <div class="footer-bottom">

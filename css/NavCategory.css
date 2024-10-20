@@ -8,7 +8,7 @@
 }
 
 .dropdown-container {
-  max-width: 1200px; /* Set a max width for large screens */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 16px;
   text-align: left;
@@ -20,12 +20,12 @@
   list-style: none;
   padding: 16px 0;
   margin: 0;
-  flex-wrap: wrap; /* Allow items to wrap on small screens */
+  flex-wrap: wrap;
 }
 
 .dropdown-item {
   position: relative;
-  margin: 0 10px; /* Adjust margin for spacing */
+  margin: 0 10px;
   display: flex;
   align-items: center;
 }
@@ -61,7 +61,7 @@
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  width: 300px; /* Adjusted width for dropdown */
+  width: 300px;
   padding: 10px;
 }
 
@@ -70,11 +70,10 @@
 }
 
 .dropdown-item .dropdown {
-  grid-template-columns: repeat(1, 1fr); /* Single column on smaller screens */
+  grid-template-columns: repeat(1, 1fr);
   gap: 8px;
 }
 
-/* Icon before each li item */
 .dropdown-item .dropdown li {
   list-style-type: none;
   position: relative;
@@ -99,28 +98,23 @@
   border-radius: 4px;
 }
 
-/* Change text color to #58A557 on hover */
 .dropdown-item .dropdown a:hover {
   color: #58a557;
 }
 
-/* Spacing for icons */
 .dropdown-item span.material-icons {
   margin-right: 8px;
 }
 
-/* Ensure dropdown icon is displayed next to text */
 .dropdown-link span.material-icons:last-child {
   margin-left: auto;
 }
 
-/* Transform dropdown only on hover */
 .dropdown-item:hover .dropdown {
   display: grid;
   animation: fadeIn 0.3s;
 }
 
-/* Optional fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -142,40 +136,36 @@
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-/* Focus effect */
 .dropdown-input:focus {
   border-color: #58a557;
   box-shadow: 0 0 5px rgba(88, 165, 87, 0.5);
   outline: none;
 }
 
-/* Hover effect */
 .dropdown-input:hover {
   border-color: #58a557;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .dropdown-menu {
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
   }
 
   .dropdown-item {
-    margin: 10px 0; /* Adjust vertical spacing for items */
+    margin: 10px 0;
   }
 
   .dropdown {
-    width: 100%; /* Full width for dropdown */
-    left: 0; /* Align dropdown to the left */
-    right: 0; /* Align dropdown to the right */
+    width: 100%;
+    left: 0;
+    right: 0;
   }
 
   .dropdown-item .dropdown {
-    grid-template-columns: repeat(2, 1fr); /* Two columns on larger mobile screens */
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Adjust the main dropdown container for mobile */
   .dropdown-container {
-    padding: 0 8px; /* Reduced padding */
+    padding: 0 8px;
   }
 }

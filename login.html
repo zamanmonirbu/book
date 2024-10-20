@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Material Icons and Font Awesome -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="./css/Navbar.css" />
     <link rel="stylesheet" href="./css/BookList.css" />
     <link rel="stylesheet" href="./css/Footer.css" />
-    <title>Login</title>
     <link rel="stylesheet" href="./css/Auth.css">
+    
+    <title>Login</title>
 </head>
 <body>
     <!-- Navbar -->
@@ -22,6 +26,8 @@
                     <span class="material-icons large-icon">menu_book</span>
                 </a>
             </div>
+            
+            <!-- Search Bar -->
             <div class="search-container">
                 <p class="search-category">Book Title</p>
                 <input type="text" placeholder="Search by title" class="search-input" id="searchBar" />
@@ -39,34 +45,34 @@
                     <a href="#">Become A Contributor</a>
                 </div>
                 <div class="icon-wrapper">
-                  <a href="wishlist.html">
-                      <span class="material-icons favorite-icon" id="wishlistIcon">favorite_border</span>
-                  </a>
-              </div>
-              
+                    <a href="wishlist.html">
+                        <span class="material-icons favorite-icon" id="wishlistIcon">favorite_border</span>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
     <hr class="navbar-strike" />
 
- <!-- Login section  -->
- <div class="container">
-    <h2>Login</h2>
-    <form>
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" id="username" required>
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" required>
-        </div>
-        <button type="submit">Login</button>
-    </form>
-    <p>Don't have an account? <a href="register.html">Register here</a></p>
-</div>
+    <!-- Login Section -->
+    <div class="container">
+        <h2>Login</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
 
+    <!-- Footer Section -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-links">
@@ -83,16 +89,15 @@
                 <h4>Follow Us</h4>
                 <div class="social-icons">
                     <a href="#" aria-label="Facebook">
-                      <i class="fab fa-facebook"></i>
+                        <i class="fab fa-facebook"></i>
                     </a>
                     <a href="#" aria-label="Twitter">
-                      <i class="fab fa-twitter"></i>
+                        <i class="fab fa-twitter"></i>
                     </a>
                     <a href="#" aria-label="Instagram">
-                      <i class="fab fa-instagram"></i>
+                        <i class="fab fa-instagram"></i>
                     </a>
-                  </div>
-                  
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
@@ -100,8 +105,7 @@
         </div>
     </footer>
 
+    <!-- JavaScript for Wishlist Functionality -->
     <script src="js/wishlist.js"></script>
 </body>
 </html>
-
-

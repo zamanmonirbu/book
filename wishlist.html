@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wishlist</title>
+    
+    <!-- Font and Icon Stylesheets -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="./css/Navbar.css" />
     <link rel="stylesheet" href="./css/NavCategory.css" />
     <link rel="stylesheet" href="./css/BookList.css" />
@@ -22,6 +26,7 @@
                     <span class="material-icons large-icon">menu_book</span>
                 </a>
             </div>
+            <!-- Search Bar -->
             <div class="search-container">
                 <p class="search-category">Book Title</p>
                 <input type="text" placeholder="Search by title" class="search-input" id="searchBar" />
@@ -43,7 +48,6 @@
                       <span class="material-icons favorite-icon" id="wishlistIcon">favorite_border</span>
                   </a>
               </div>
-              
             </div>
         </div>
     </nav>
@@ -54,13 +58,14 @@
     <div class="content-container">
         <h1>Wishlist</h1>
 
-        <!-- Loader spinner -->
+        <!-- Loader spinner for loading state -->
         <div id="loader" class="loader"></div>
 
-        <!-- Book list -->
+        <!-- Container for the list of books in the wishlist -->
         <div id="wishlistBooks" class="book-list"></div>
     </div>
 
+    <!-- Footer Section -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-links">
@@ -86,7 +91,6 @@
                       <i class="fab fa-instagram"></i>
                     </a>
                   </div>
-                  
             </div>
         </div>
         <div class="footer-bottom">
@@ -94,6 +98,7 @@
         </div>
     </footer>
 
+    <!-- JavaScript file for wishlist functionality -->
     <script src="js/wishlist.js"></script>
 </body>
 </html>
